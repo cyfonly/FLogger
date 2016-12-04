@@ -36,3 +36,7 @@ SINGLE_LOG_FILE_SIZE = 10485760
 # 单个日志文件缓存的大小(默认为10KB)
 SINGLE_LOG_CACHE_SIZE = 10240
 ```  
+  
+# License
+MIT  
+
