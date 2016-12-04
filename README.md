@@ -18,7 +18,7 @@ logger.writeLog("wrong", Constant.ERROR, "Here is your customized log file and l
 ```
 
 # Config
->log.properties  
+>log.properties(项目根路径下)
 
 ```
 ########## 公共环境配置 ##########
