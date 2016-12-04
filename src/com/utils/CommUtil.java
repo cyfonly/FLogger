@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Properties;
-import com.FLogger;
 import com.constants.Constant;
 
 /**
@@ -118,7 +117,7 @@ public class CommUtil {
 				return str.getBytes(Constant.CFG_CHARSET_NAME);
 			}
 		}catch(Exception e){
-			FLogger.writeLog("Error", Constant.ERROR, getExpStack(e));
+			e.printStackTrace();
 		}
 		return null;
 	}

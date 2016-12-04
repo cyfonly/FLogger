@@ -26,8 +26,8 @@ public class FLogger {
 	 * @param level
 	 * @param logMsg
 	 */
-	public static void debug(String logMsg){
-		FLogger.writeLog("Debug",Constant.DEBUG,logMsg);
+	public void debug(String logMsg){
+		writeLog("Debug",Constant.DEBUG,logMsg);
 	}
 	
 	/**
@@ -35,8 +35,8 @@ public class FLogger {
 	 * @param level
 	 * @param logMsg
 	 */
-	public static void info(String logMsg){
-		FLogger.writeLog("Info",Constant.INFO,logMsg);
+	public void info(String logMsg){
+		writeLog("Info",Constant.INFO,logMsg);
 	}
 	
 	/**
@@ -44,8 +44,8 @@ public class FLogger {
 	 * @param level
 	 * @param logMsg
 	 */
-	public static void warn(String logMsg){
-		FLogger.writeLog("Warn",Constant.WARN,logMsg);
+	public void warn(String logMsg){
+		writeLog("Warn",Constant.WARN,logMsg);
 	}
 	
 	/**
@@ -53,8 +53,8 @@ public class FLogger {
 	 * @param level
 	 * @param logMsg
 	 */
-	public static void error(String logMsg){
-		FLogger.writeLog("Error",Constant.ERROR,logMsg);
+	public void error(String logMsg){
+		writeLog("Error",Constant.ERROR,logMsg);
 	}
 	
 	/**
@@ -62,8 +62,8 @@ public class FLogger {
 	 * @param level
 	 * @param logMsg
 	 */
-	public static void fatal(String logMsg){
-		FLogger.writeLog("Fatal",Constant.FATAL,logMsg);
+	public void fatal(String logMsg){
+		writeLog("Fatal",Constant.FATAL,logMsg);
 	}
 	
 	/**
@@ -71,8 +71,8 @@ public class FLogger {
 	 * @param level
 	 * @param logMsg
 	 */
-	public static void writeLog(int level,String logMsg){
-		FLogger.writeLog("System",level,logMsg);
+	public void writeLog(int level,String logMsg){
+		writeLog("System",level,logMsg);
 	}
 	
 	/**
@@ -81,7 +81,7 @@ public class FLogger {
 	 * @param iLevel
 	 * @param logMsg
 	 */
-	public static void writeLog(String logFileName, int level, String logMsg){
+	public void writeLog(String logFileName, int level, String logMsg){
 		if(logMsg != null && Constant.CFG_LOG_LEVEL.indexOf(""+level) >= 0){
 			StringBuffer sb = new StringBuffer(logMsg.length() + 100);
 			sb.append(TimeUtil.getFullDateTime());
