@@ -1,7 +1,7 @@
 package com;
 
 import com.constants.Constant;
-import com.log.LogManager;
+import com.strategy.LogManager;
 import com.utils.CommUtil;
 import com.utils.TimeUtil;
 
@@ -13,6 +13,10 @@ import com.utils.TimeUtil;
 public class FLogger {
 	
 	private static FLogger instance;
+	
+	public FLogger(){
+		
+	}
 	
 	public static synchronized FLogger getInstance(){
 		if(instance == null){

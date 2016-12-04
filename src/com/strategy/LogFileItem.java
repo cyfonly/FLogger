@@ -1,4 +1,4 @@
-package com.log;
+package com.strategy;
 
 import java.util.ArrayList;
 

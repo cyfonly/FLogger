@@ -1,4 +1,4 @@
-package com.log;
+package com.strategy;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,17 +26,21 @@ public class LogManager extends Thread {
 	private Map<String,LogFileItem> logFileMap = new ConcurrentHashMap<String,LogFileItem>();
 	
 	/** 日志写入的间隔时间 */
-	public final static int WRITE_LOG_INV_TIME = CommUtil.getConfigByInt("WRITE_LOG_INV_TIME", 1000);
+	public final static long WRITE_LOG_INV_TIME = CommUtil.getConfigByLong("WRITE_LOG_INV_TIME", 1000);
 	
 	/** 单个日志文件的大小(默认为10M) */
-	public final static int SINGLE_LOG_FILE_SIZE = CommUtil.getConfigByInt("SINGLE_LOG_FILE_SIZE", 1024*1024*10);
+	public final static long SINGLE_LOG_FILE_SIZE = CommUtil.getConfigByLong("SINGLE_LOG_FILE_SIZE", 1024*1024*10);
 	
 	/** 缓存大小(默认10KB) */
-	public final static int SINGLE_LOG_CACHE_SIZE = CommUtil.getConfigByInt("SINGLE_LOG_CACHE_SIZE", 1024*10);
+	public final static long SINGLE_LOG_CACHE_SIZE = CommUtil.getConfigByLong("SINGLE_LOG_CACHE_SIZE", 1024*10);
 	
 	/** 是否运行 */
 	private boolean bIsRun = true ;
 	
+	public LogManager(){
+		
+	}
+		
 	/**
 	 * 获得日志管理类单例
 	 */

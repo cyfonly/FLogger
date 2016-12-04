@@ -34,15 +34,15 @@ public class CommUtil {
 	}
 	
 	/**
-	 * 从配置文件中取得整型的值，若无则返回默认值
+	 * 从配置文件中取得长整型的值，若无则返回默认值
 	 * @param keyName
 	 * @param defaultValue
 	 * @return
 	 */
-	public static int getConfigByInt(String keyName,int defaultValue){
+	public static long getConfigByLong(String keyName,long defaultValue) {
 		String value = getConfig(keyName);
 		if(value != null && value.length() > 0){
-			return Integer.parseInt(value.trim());
+			return Long.parseLong(value.trim());
 		}else{
 			return defaultValue;
 		}
@@ -53,7 +53,7 @@ public class CommUtil {
 	 * @param keyName
 	 * @return
 	 */
-	public static String getConfig(String keyName) {
+	private static String getConfig(String keyName) {
 		return CommUtil.getConfig("log.properties",keyName);
 	}
 	
@@ -63,16 +63,16 @@ public class CommUtil {
 	 * @param keyName
 	 * @return
 	 */
-	public static String getConfig(String fileName,String keyName) {
+	private static String getConfig(String filePath, String keyName) {
 		Properties props = null;
 		boolean bIsNeedLoadCfg = false;
 
-		File cfgFile = new File(fileName);
+		File cfgFile = new File(filePath);
 		if(!cfgFile.exists()){
-			return "";
+			return null;
 		}
 		
-		Object[] arrs = propsMap.get(fileName);
+		Object[] arrs = propsMap.get(filePath);
 		if(arrs == null){
 			bIsNeedLoadCfg = true ;
 		}else{
@@ -90,7 +90,7 @@ public class CommUtil {
 				fis = new FileInputStream(cfgFile);
 				props = new Properties();		
 				props.load(fis);
-				propsMap.put(fileName, new Object[]{cfgFile.lastModified(),props});
+				propsMap.put(filePath, new Object[]{cfgFile.lastModified(),props});
 			}catch (Exception e) {
 				return "";
 			}finally{
