@@ -2,14 +2,14 @@
 
 import java.util.HashMap;
 import java.util.Map;
-
-import com.util.CommUtil;
+import com.utils.CommUtil;
 
 /**
  * 常量
  * @author yunfeng.cheng
  * @version 2015/10/31
  */
+@SuppressWarnings("serial")
 public final class Constant {
 
 	//------------------日志类型
@@ -28,7 +28,7 @@ public final class Constant {
 	public static String CFG_LOG_LEVEL = CommUtil.getConfigByString("LOG_LEVEL","1,2,3,4");
 	
 	/**当前运行环境的字符集*/
-	public static String CFG_CHARSET_NAME = CommUtil.getConfigByString("CHARSET_NAME","GBK");
+	public static String CFG_CHARSET_NAME = CommUtil.getConfigByString("CHARSET_NAME","UTF-8");
 	
 	/**日志文件路径*/
 	public static String CFG_LOG_PATH = CommUtil.getConfigByString("LOG_PATH","./log");

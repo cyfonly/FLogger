@@ -2,8 +2,8 @@ package com;
 
 import com.constants.Constant;
 import com.log.LogManager;
-import com.util.CommUtil;
-import com.util.TimeUtil;
+import com.utils.CommUtil;
+import com.utils.TimeUtil;
 
 /**
  * 日志工具类

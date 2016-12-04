@@ -8,10 +8,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import com.constants.Constant;
-import com.util.CommUtil;
-import com.util.TimeUtil;
+import com.utils.CommUtil;
+import com.utils.TimeUtil;
 
 /**
  * 日志管理线程
@@ -44,7 +43,7 @@ public class LogManager extends Thread {
 	public synchronized static LogManager getInstance(){
 		if(instance == null){
 			instance = new LogManager();
-			instance.setName("Log");
+			instance.setName("FLogger");
 			instance.start();
 		}
 		return instance;

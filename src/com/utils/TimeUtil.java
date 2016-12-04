@@ -1,4 +1,4 @@
-package com.util;
+package com.utils;
 
 import java.util.Calendar;
 
@@ -116,8 +116,7 @@ public class TimeUtil {
 	 * 获取当前时间
 	 * @return 时分秒，格式如122415，12时24分15秒
 	 */
-	public static String getCurrTime() 
-	{
+	public static String getCurrTime() {
 		StringBuffer sb = new StringBuffer(30);
 		Calendar nowtime = Calendar.getInstance();
 		int _hour = nowtime.get(Calendar.HOUR_OF_DAY); //获取小时

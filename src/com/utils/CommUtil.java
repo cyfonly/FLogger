@@ -1,4 +1,4 @@
-package com.util;
+package com.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Properties;
-
 import com.FLogger;
 import com.constants.Constant;
 
@@ -36,7 +35,7 @@ public class CommUtil {
 	}
 	
 	/**
-	 * 从配置文件中取得短整型的值,，若无则返回默认值
+	 * 从配置文件中取得整型的值，若无则返回默认值
 	 * @param keyName
 	 * @param defaultValue
 	 * @return
@@ -70,7 +69,7 @@ public class CommUtil {
 		boolean bIsNeedLoadCfg = false;
 
 		File cfgFile = new File(fileName);
-		if(cfgFile.exists() == false){
+		if(!cfgFile.exists()){
 			return "";
 		}
 		
