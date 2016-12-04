@@ -8,3 +8,12 @@
 4. 超轻量，不依赖任何第三方库
 5. 多日志级别，支持debug、info、warn、error和fatal等日志基本
 6. 性能保证
+  
+# usage  
+```
+FLogger logger = FLogger.getInstance();    //获取单例
+logger.info("Here is your message..."); 
+logger.writeLog(Constant.INFO, "Here is your customized level message...");
+logger.writeLog("wrong", Constant.ERROR, "Here is your customized log file and level message...");
+```
+
