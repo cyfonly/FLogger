@@ -12,6 +12,8 @@
     
 
 # Usage  
+>add flogger.jar to your project  
+
 ```
 FLogger logger = FLogger.getInstance();    //获取单例
 logger.info("Here is your message..."); 
