@@ -15,11 +15,11 @@
 >add flogger.jar to your project  
 
 ```
-FLogger logger = FLogger.getInstance();    //获取单例
-logger.info("Here is your message...");
-logger.writeLog(Constant.INFO, "Here is your customized level message...");
-logger.writeLog("error", Constant.ERROR, "Here is your customized log file and level message...");
-```  
+FLogger logger = FLogger.getInstance(); //获取单例
+logger.info("Here is your message..."); //写info日志
+logger.writeLog(Constant.INFO, "Here is your customized level message..."); //写system日志
+logger.writeLog("error", Constant.ERROR, "Here is your customized log file and level message..."); //写error日志
+```  
 
 # Config  
 
