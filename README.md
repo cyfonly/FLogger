@@ -1,8 +1,8 @@
 # FLogger
-基于双缓存队列、多刷盘机制的超轻量级 java project log
+基于双缓冲队列、多刷盘机制的超轻量级 java project log
 
 # Features
-1. 双缓存队列
+1. 双缓冲队列
 2. 多种刷盘机制，支持时间触发、缓存大小触发、服务关闭强制触发等刷盘方式
 3. 多种RollingFile机制，支持文件大小触发、按天触发等Rolling方式
 4. 多日志级别，支持debug、info、warn、error和fatal等日志级别
