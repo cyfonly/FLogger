@@ -94,7 +94,7 @@ public class LogManager extends Thread {
             	flush(false);
             	//重新获取日志级别
             	if(i++ % 100 == 0){
-            		Constant.CFG_LOG_LEVEL = CommUtil.getConfigByString("LOG_LEVEL","2,3,4,5,6");
+            		Constant.CFG_LOG_LEVEL = CommUtil.getConfigByString("LOG_LEVEL","0,1,2,3,4");
             		i = 1;
             	}
 			}catch(Exception e){

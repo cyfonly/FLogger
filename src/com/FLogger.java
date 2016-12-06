@@ -88,12 +88,13 @@ public class FLogger {
 	public void writeLog(String logFileName, int level, String logMsg){
 		if(logMsg != null && Constant.CFG_LOG_LEVEL.indexOf(""+level) >= 0){
 			StringBuffer sb = new StringBuffer(logMsg.length() + 100);
+			sb.append("[");
+			sb.append(Constant.LOG_DESC_MAP.get(String.valueOf(level)));
+			sb.append("] ");
 			sb.append(TimeUtil.getFullDateTime());
 			sb.append(" [");
 			sb.append(Thread.currentThread().getName());
 			sb.append("] ");
-			sb.append(Constant.LOG_DESC_MAP.get(String.valueOf(level)));
-			sb.append(": ");
 			sb.append(logMsg);
 			sb.append("\n");
 			LogManager.getInstance().addLog(logFileName, sb);
