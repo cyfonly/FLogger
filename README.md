@@ -20,8 +20,24 @@ logger.info("Here is your message..."); //写info日志
 logger.writeLog(Constant.INFO, "Here is your customized level message..."); //写system日志
 logger.writeLog("error", Constant.ERROR, "Here is your customized log file and level message..."); //写error日志
 ```
+  
+# Output  
 
-# Config  
+>info.log
+```
+[INFO] 2016-12-06 21:07:32:840 [main] Here is your message...
+```  
+>system.log  
+```
+[WARN] 2016-12-06 21:07:32:842 [main] Here is your customized level message...
+```  
+>error.log  
+```
+[ERROR] 2016-12-06 21:07:32:842 [main] Here is your customized log file and level message...
+```
+
+
+# Config  
 
 >log.properties(项目根路径下)  
 
