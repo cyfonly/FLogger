@@ -24,18 +24,20 @@ logger.writeLog(Constant.INFO, "Here is your customized level message...");
 //指定日志输出文件名、日志级别和内容
 logger.writeLog("error", Constant.ERROR, "Here is your customized log file and level message...");
 ```
-  
 # Output  
 
->info.log
+>info.log  
+
 ```
 [INFO] 2016-12-06 21:07:32:840 [main] Here is your message...
 ```  
 >warn.log  
+
 ```
 [WARN] 2016-12-06 21:07:32:842 [main] Here is your customized level message...
 ```  
 >error.log  
+
 ```
 [ERROR] 2016-12-06 21:07:32:842 [main] Here is your customized log file and level message...
 ```
