@@ -31,7 +31,7 @@ public class FLogger {
 	 * @param logMsg
 	 */
 	public void debug(String logMsg){
-		writeLog("Debug",Constant.DEBUG,logMsg);
+		writeLog("debug",Constant.DEBUG,logMsg);
 	}
 	
 	/**
@@ -40,7 +40,7 @@ public class FLogger {
 	 * @param logMsg
 	 */
 	public void info(String logMsg){
-		writeLog("Info",Constant.INFO,logMsg);
+		writeLog("info",Constant.INFO,logMsg);
 	}
 	
 	/**
@@ -49,7 +49,7 @@ public class FLogger {
 	 * @param logMsg
 	 */
 	public void warn(String logMsg){
-		writeLog("Warn",Constant.WARN,logMsg);
+		writeLog("warn",Constant.WARN,logMsg);
 	}
 	
 	/**
@@ -58,7 +58,7 @@ public class FLogger {
 	 * @param logMsg
 	 */
 	public void error(String logMsg){
-		writeLog("Error",Constant.ERROR,logMsg);
+		writeLog("error",Constant.ERROR,logMsg);
 	}
 	
 	/**
@@ -67,7 +67,7 @@ public class FLogger {
 	 * @param logMsg
 	 */
 	public void fatal(String logMsg){
-		writeLog("Fatal",Constant.FATAL,logMsg);
+		writeLog("fatal",Constant.FATAL,logMsg);
 	}
 	
 	/**
@@ -76,7 +76,7 @@ public class FLogger {
 	 * @param logMsg
 	 */
 	public void writeLog(int level,String logMsg){
-		writeLog("System",level,logMsg);
+		writeLog(Constant.LOG_DESC_MAP.get(String.valueOf(level)).toLowerCase(),level,logMsg);
 	}
 	
 	/**
