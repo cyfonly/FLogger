@@ -15,10 +15,14 @@
 >add flogger.jar to your project  
 
 ```
-FLogger logger = FLogger.getInstance(); //获取单例
-logger.info("Here is your message..."); //写info日志
-logger.writeLog(Constant.INFO, "Here is your customized level message..."); //写system日志
-logger.writeLog("error", Constant.ERROR, "Here is your customized log file and level message..."); //写error日志
+//获取单例
+FLogger logger = FLogger.getInstance();
+//简便api,只需指定内容
+logger.info("Here is your message...");
+//指定日志级别和内容，文件名自动映射
+logger.writeLog(Constant.INFO, "Here is your customized level message...");
+//指定日志输出文件名、日志级别和内容
+logger.writeLog("error", Constant.ERROR, "Here is your customized log file and level message...");
 ```
   
 # Output  
@@ -27,7 +31,7 @@ logger.writeLog("error", Constant.ERROR, "Here is your customized log file and l
 ```
 [INFO] 2016-12-06 21:07:32:840 [main] Here is your message...
 ```  
->system.log  
+>warn.log  
 ```
 [WARN] 2016-12-06 21:07:32:842 [main] Here is your customized level message...
 ```  
