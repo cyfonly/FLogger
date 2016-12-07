@@ -1,4 +1,6 @@
 # FLogger
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]()
+[![Build Status](https://img.shields.io/travis/weibocom/motan/master.svg?label=Build)]()  
 基于双缓冲队列、多刷盘机制的超轻量级 java 日志  
 
 # Features
