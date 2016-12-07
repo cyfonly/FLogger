@@ -1,5 +1,5 @@
 # FLogger
-基于双缓冲队列、多刷盘机制的超轻量级 java project log
+基于双缓冲队列、多刷盘机制的超轻量级 java 日志  
 
 # Features
 1. 双缓冲队列
