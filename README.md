@@ -1,4 +1,4 @@
-# FLogger
+![design](https://github.com/cyfonly/FLogger/blob/master/FLogger.png "FLooger")  
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/cyfonly/FLogger/blob/master/LICENCE)  
 基于双缓冲队列、多刷盘机制的超轻量级 java 日志  
 
