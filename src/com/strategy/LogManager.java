@@ -122,7 +122,7 @@ public class LogManager extends Thread {
     	Iterator<String> iter = logFileMap.keySet().iterator();
     	while(iter.hasNext()){
     		LogFileItem lfi = logFileMap.get(iter.next());
-    		if(currTime >= lfi.nextWriteTime || SINGLE_LOG_CACHE_SIZE >= lfi.currCacheSize || bIsForce == true){
+    		if(currTime >= lfi.nextWriteTime || SINGLE_LOG_CACHE_SIZE <= lfi.currCacheSize || bIsForce == true){
     			//获得需要进行输出的缓存列表
     			ArrayList<StringBuffer> alWrtLog = null;
     			synchronized(lfi){

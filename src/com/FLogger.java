@@ -13,9 +13,19 @@ import com.utils.TimeUtil;
 public class FLogger {
 	
 	private static FLogger instance;
+	private static LogManager logManager;
+	
+	static {
+		logManager = LogManager.getInstance();
+	}
 	
 	public FLogger(){
-		
+		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+			@Override
+			public void run() {
+				close();
+			}
+		}));
 	}
 	
 	public static synchronized FLogger getInstance(){
@@ -97,7 +107,7 @@ public class FLogger {
 			sb.append("] ");
 			sb.append(logMsg);
 			sb.append("\n");
-			LogManager.getInstance().addLog(logFileName, sb);
+			logManager.addLog(logFileName, sb);
 			
 			//错误信息同时打印到控制台
 			if(Constant.ERROR == level || Constant.FATAL == level){
@@ -108,6 +118,13 @@ public class FLogger {
 				}
 			}
 		}
+	}
+	
+	/**
+	 * 优雅关闭
+	 */
+	public void close(){
+		logManager.close();
 	}
 	
 }
