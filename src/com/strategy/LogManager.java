@@ -88,8 +88,6 @@ public class LogManager extends Thread {
 		int i = 0 ;
 		while(bIsRun){
 			try{
-            	//等待一定时间
-            	Thread.sleep(200);
 				//输出到文件
             	flush(false);
             	//重新获取日志级别
