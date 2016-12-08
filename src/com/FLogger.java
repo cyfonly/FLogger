@@ -123,7 +123,7 @@ public class FLogger {
 	/**
 	 * 优雅关闭
 	 */
-	public void close(){
+	private void close(){
 		logManager.close();
 	}
 	
