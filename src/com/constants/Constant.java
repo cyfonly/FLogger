@@ -25,7 +25,7 @@ public final class Constant {
 	public final static int FATAL = 4;
 	
 	/**日志级别*/
-	public static String CFG_LOG_LEVEL = CommUtil.getConfigByString("LOG_LEVEL","1,2,3,4");
+	public static String CFG_LOG_LEVEL = CommUtil.getConfigByString("LOG_LEVEL","0,1,2,3,4");
 	
 	/**当前运行环境的字符集*/
 	public static String CFG_CHARSET_NAME = CommUtil.getConfigByString("CHARSET_NAME","UTF-8");

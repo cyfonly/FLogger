@@ -40,7 +40,7 @@ public class LogManager extends Thread {
 	public LogManager(){
 		
 	}
-		
+	
 	/**
 	 * 获得日志管理类单例
 	 */
@@ -141,7 +141,7 @@ public class LogManager extends Thread {
     			int iWriteSize = writeToFile(lfi.fullLogFileName,alWrtLog);
     			lfi.currLogSize += iWriteSize;
     		}
-    	}    	
+    	}
     }
     
     /**
@@ -151,6 +151,12 @@ public class LogManager extends Thread {
     private void createLogFile(LogFileItem lfi){
     	//当前系统日期
     	String currPCDate = TimeUtil.getPCDate('-');
+    	
+    	//判断日志root路径是否存在，不存在则先创建
+    	File rootDir = new File(Constant.CFG_LOG_PATH);
+    	if(!rootDir.exists() || !rootDir.isDirectory()){
+    		rootDir.mkdir();
+    	}
     	
     	//如果超过单个文件大小，则拆分文件
     	if(lfi.fullLogFileName != null && lfi.fullLogFileName.length() > 0 && lfi.currLogSize >= LogManager.SINGLE_LOG_FILE_SIZE ){
@@ -165,10 +171,10 @@ public class LogManager extends Thread {
     		}
     	}
     	//创建文件
-    	if ( lfi.fullLogFileName == null || lfi.fullLogFileName.length() <= 0 || lfi.lastPCDate.equals(currPCDate) == false ){
+    	if ( lfi.fullLogFileName == null || lfi.fullLogFileName.length() <= 0 || !lfi.lastPCDate.equals(currPCDate)){
     		String sDir = Constant.CFG_LOG_PATH + "/" + currPCDate ;
     		File file = new File(sDir);
-    		if(file.exists() == false){
+    		if(!file.exists()){
     			file.mkdir();
     		}
     		lfi.fullLogFileName = sDir + "/" + lfi.logFileName + ".log";
