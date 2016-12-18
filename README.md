@@ -45,8 +45,14 @@ logger.writeLog("error", Constant.ERROR, "Here is your customized log file and l
 
 
 # Config  
+### 配置文件名称  
+flogger.properties  
+### 配置文件加载顺序  
+1. 项目根路径
+2. src/main/resources
+3. 默认配置  
 
->log.properties(项目根路径下)  
+### 配置项  
 
 ```
 ########## 公共环境配置 ##########
