@@ -1,4 +1,4 @@
-package com.utils;
+package com.cyfonly.flogger.utils;
 
 import java.util.Calendar;
 

@@ -1,9 +1,9 @@
-package com;
+package com.cyfonly.flogger;
 
-import com.constants.Constant;
-import com.strategy.LogManager;
-import com.utils.CommUtil;
-import com.utils.TimeUtil;
+import com.cyfonly.flogger.constants.Constant;
+import com.cyfonly.flogger.strategy.LogManager;
+import com.cyfonly.flogger.utils.CommUtil;
+import com.cyfonly.flogger.utils.TimeUtil;
 
 /**
  * 日志工具类
@@ -37,8 +37,7 @@ public class FLogger {
 	
 	/**
 	 * 写调试日志
-	 * @param level
-	 * @param logMsg
+	 * @param logMsg 日志内容
 	 */
 	public void debug(String logMsg){
 		writeLog("debug",Constant.DEBUG,logMsg);
@@ -46,8 +45,7 @@ public class FLogger {
 	
 	/**
 	 * 写普通日志
-	 * @param level
-	 * @param logMsg
+	 * @param logMsg 日志内容
 	 */
 	public void info(String logMsg){
 		writeLog("info",Constant.INFO,logMsg);
@@ -55,8 +53,7 @@ public class FLogger {
 	
 	/**
 	 * 写警告日志
-	 * @param level
-	 * @param logMsg
+	 * @param logMsg 日志内容
 	 */
 	public void warn(String logMsg){
 		writeLog("warn",Constant.WARN,logMsg);
@@ -64,8 +61,7 @@ public class FLogger {
 	
 	/**
 	 * 写错误日志
-	 * @param level
-	 * @param logMsg
+	 * @param logMsg 日志内容
 	 */
 	public void error(String logMsg){
 		writeLog("error",Constant.ERROR,logMsg);
@@ -73,8 +69,7 @@ public class FLogger {
 	
 	/**
 	 * 写严重错误日志
-	 * @param level
-	 * @param logMsg
+	 * @param logMsg 日志内容
 	 */
 	public void fatal(String logMsg){
 		writeLog("fatal",Constant.FATAL,logMsg);
@@ -82,8 +77,8 @@ public class FLogger {
 	
 	/**
 	 * 写系统日志
-	 * @param level
-	 * @param logMsg
+	 * @param level 日志级别
+	 * @param logMsg 日志内容
 	 */
 	public void writeLog(int level,String logMsg){
 		writeLog(Constant.LOG_DESC_MAP.get(String.valueOf(level)).toLowerCase(),level,logMsg);
@@ -91,9 +86,9 @@ public class FLogger {
 	
 	/**
 	 * 写日志
-	 * @param logFile
-	 * @param iLevel
-	 * @param logMsg
+	 * @param logFileName 日志文件名
+	 * @param level 日志级别
+	 * @param logMsg 日志内容
 	 */
 	public void writeLog(String logFileName, int level, String logMsg){
 		if(logMsg != null && Constant.CFG_LOG_LEVEL.indexOf(""+level) >= 0){

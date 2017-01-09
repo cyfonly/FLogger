@@ -1,4 +1,4 @@
-package com.strategy;
+package com.cyfonly.flogger.strategy;
 
 import java.util.ArrayList;
 

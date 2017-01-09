@@ -1,4 +1,4 @@
-package com.strategy;
+package com.cyfonly.flogger.strategy;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import com.constants.Constant;
-import com.utils.CommUtil;
-import com.utils.TimeUtil;
+import com.cyfonly.flogger.constants.Constant;
+import com.cyfonly.flogger.utils.CommUtil;
+import com.cyfonly.flogger.utils.TimeUtil;
 
 /**
  * 日志管理线程

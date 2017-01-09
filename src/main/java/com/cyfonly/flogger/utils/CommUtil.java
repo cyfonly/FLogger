@@ -1,4 +1,4 @@
-package com.utils;
+package com.cyfonly.flogger.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Properties;
-import com.constants.Constant;
+import com.cyfonly.flogger.constants.Constant;
 
 /**
  * 公用工具类
@@ -23,9 +23,9 @@ public class CommUtil {
 	
 	/**
 	 * 从配置文件中取得字符串的值，若无则返回默认值
-	 * @param keyName
-	 * @param defaultValue
-	 * @return
+	 * @param keyName 属性名
+	 * @param defaultValue 默认值
+	 * @return 属性值
 	 */
 	public static String getConfigByString(String keyName,String defaultValue){
 		String value = getConfig(keyName);
@@ -38,9 +38,9 @@ public class CommUtil {
 	
 	/**
 	 * 从配置文件中取得长整型的值，若无则返回默认值
-	 * @param keyName
-	 * @param defaultValue
-	 * @return
+	 * @param keyName 属性名
+	 * @param defaultValue 默认值
+	 * @return 属性值
 	 */
 	public static long getConfigByLong(String keyName,long defaultValue) {
 		String value = getConfig(keyName);
@@ -56,9 +56,8 @@ public class CommUtil {
 	 * 配置文件查找顺序：
 	 * 		1-项目根路径
 	 * 		2-src/main/resources
-	 * @param fileName
-	 * @param keyName
-	 * @return
+	 * @param keyName 属性名
+	 * @return 属性值
 	 */
 	private static String getConfig(String keyName) {
 		Properties props = null;
@@ -112,8 +111,8 @@ public class CommUtil {
 	
 	/**
 	 * 将字符串转为字节数组
-	 * @param str
-	 * @return
+	 * @param str 源字符串
+	 * @return 字节数组
 	 */
 	public static byte[] StringToBytes(String str) {
 		try{
@@ -131,7 +130,7 @@ public class CommUtil {
 	/**
 	 * 将异常的堆栈信息转为字符串
 	 * @param e 异常
-	 * @return
+	 * @return 异常的字符串描述
 	 */
 	public static String getExpStack(Exception e) {
 		ByteArrayOutputStream bo = new ByteArrayOutputStream();

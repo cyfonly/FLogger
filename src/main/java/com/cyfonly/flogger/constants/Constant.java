@@ -1,15 +1,13 @@
-﻿package com.constants;
-
+package com.cyfonly.flogger.constants;
 import java.util.HashMap;
 import java.util.Map;
-import com.utils.CommUtil;
+import com.cyfonly.flogger.utils.CommUtil;
 
 /**
  * 常量
  * @author yunfeng.cheng
  * @version 2015/10/31
  */
-@SuppressWarnings("serial")
 public final class Constant {
 
 	//------------------日志类型
@@ -34,6 +32,7 @@ public final class Constant {
 	public static String CFG_LOG_PATH = CommUtil.getConfigByString("LOG_PATH","./log");
 	
 	/** 日志类型描述map*/
+	@SuppressWarnings("serial")
 	public static Map<String, String> LOG_DESC_MAP = new HashMap<String, String>(){{
 		put("0","DEBUG");
 		put("1","INFO");
