@@ -14,6 +14,8 @@
 
 # Usage  
 #### Maven
+>备注：刚上传至Maven中央仓库，预计今晚八点（2017-01-09 20:00）后生效。  
+
 ```
 <dependency>
     <groupId>com.github.cyfonly</groupId>
