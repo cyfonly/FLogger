@@ -24,7 +24,7 @@
 </dependency>
 ```  
 #### 2. flogger.properties  
-see `Usage`  
+see `Config`  
 
 #### 3. In your project code
 ```
