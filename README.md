@@ -78,5 +78,8 @@ SINGLE_LOG_FILE_SIZE = 10485760
 SINGLE_LOG_CACHE_SIZE = 10240
 ```  
 
+# Demo
+see [https://github.com/cyfonly/FLogger/tree/master/src/test](https://github.com/cyfonly/FLogger/tree/master/src/test)  
+
 # License  
 MIT  
