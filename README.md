@@ -13,7 +13,7 @@
     
 
 # Usage  
-#### Maven
+#### 1. Maven
 >备注：刚上传至Maven中央仓库，预计今晚八点（2017-01-09 20:00）后生效。  
 
 ```
@@ -22,15 +22,18 @@
     <artifactId>flogger</artifactId>
     <version>1.0.0</version>
 </dependency>
-```
-#### In your project code
+```  
+#### 2. flogger.properties  
+see `Usage`  
+
+#### 3. In your project code
 ```
 //获取单例
 FLogger logger = FLogger.getInstance();
 //简便api,只需指定内容
 logger.info("Here is your message...");
 //指定日志级别和内容，文件名自动映射
-logger.writeLog(Constant.INFO, "Here is your customized level message...");
+logger.writeLog(Constant.WARN, "Here is your customized level message...");
 //指定日志输出文件名、日志级别和内容
 logger.writeLog("error", Constant.ERROR, "Here is your customized log file and level message...");
 ```
@@ -54,14 +57,14 @@ logger.writeLog("error", Constant.ERROR, "Here is your customized log file and l
 
 
 # Config  
-#### 配置文件名称  
+#### 1. 配置文件名称  
 flogger.properties  
-#### 配置文件加载顺序  
+#### 2. 配置文件加载顺序  
 1. 项目根路径
 2. src/main/resources
 3. 默认配置  
 
-#### 配置项  
+#### 3. 配置项  
 
 ```
 ########## 公共环境配置 ##########
