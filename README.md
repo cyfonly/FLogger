@@ -13,8 +13,15 @@
     
 
 # Usage  
->add flogger.jar to your project  
-
+### Maven
+```
+<dependency>
+    <groupId>com.github.cyfonly</groupId>
+    <artifactId>flogger</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+### In your project code
 ```
 //获取单例
 FLogger logger = FLogger.getInstance();
