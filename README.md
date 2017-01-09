@@ -13,7 +13,7 @@
     
 
 # Usage  
-### Maven
+#### Maven
 ```
 <dependency>
     <groupId>com.github.cyfonly</groupId>
@@ -21,7 +21,7 @@
     <version>1.0.0</version>
 </dependency>
 ```
-### In your project code
+#### In your project code
 ```
 //获取单例
 FLogger logger = FLogger.getInstance();
@@ -34,17 +34,17 @@ logger.writeLog("error", Constant.ERROR, "Here is your customized log file and l
 ```
 # Output  
 
->info.log  
+#### info.log  
 
 ```
 [INFO] 2016-12-06 21:07:32:840 [main] Here is your message...
 ```  
->warn.log  
+#### warn.log  
 
 ```
 [WARN] 2016-12-06 21:07:32:842 [main] Here is your customized level message...
 ```  
->error.log  
+#### error.log  
 
 ```
 [ERROR] 2016-12-06 21:07:32:842 [main] Here is your customized log file and level message...
@@ -52,14 +52,14 @@ logger.writeLog("error", Constant.ERROR, "Here is your customized log file and l
 
 
 # Config  
-### 配置文件名称  
+#### 配置文件名称  
 flogger.properties  
-### 配置文件加载顺序  
+#### 配置文件加载顺序  
 1. 项目根路径
 2. src/main/resources
 3. 默认配置  
 
-### 配置项  
+#### 配置项  
 
 ```
 ########## 公共环境配置 ##########
