@@ -86,4 +86,4 @@ SINGLE_LOG_CACHE_SIZE = 10240
 see [https://github.com/cyfonly/FLogger/tree/master/src/test](https://github.com/cyfonly/FLogger/tree/master/src/test)  
 
 # License  
-基于 Apache License 2.0 发布。有关详细信息，请参阅 [LICENCE](https://github.com/cyfonly/FLogger/blob/master/LICENCE)。
+基于 Apache License 2.0 发布。有关详细信息，请参阅 [LICENSE](https://github.com/cyfonly/FLogger/blob/master/LICENCE)。
