@@ -1,5 +1,5 @@
 ![design](https://github.com/cyfonly/FLogger/blob/master/FLogger.png "FLooger")  
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/cyfonly/FLogger/blob/master/LICENCE)  
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/cyfonly/FLogger/blob/master/LICENCE)  [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://search.maven.org/#search%7Cga%7C1%7Ccyfonly)  
 基于双缓冲队列、多刷盘机制的超轻量级 java 日志  
 
 # Features
