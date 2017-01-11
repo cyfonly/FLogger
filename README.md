@@ -1,5 +1,5 @@
 ![design](https://github.com/cyfonly/FLogger/blob/master/FLogger.png "FLooger")  
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/cyfonly/FLogger/blob/master/LICENCE)  [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://search.maven.org/#search%7Cga%7C1%7Ccyfonly)  
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/cyfonly/FLogger/blob/master/LICENSE)  [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://search.maven.org/#search%7Cga%7C1%7Ccyfonly)  
 基于双缓冲队列、多刷盘机制的超轻量级 java 日志  
 
 # Features
@@ -86,4 +86,4 @@ SINGLE_LOG_CACHE_SIZE = 10240
 see [https://github.com/cyfonly/FLogger/tree/master/src/test](https://github.com/cyfonly/FLogger/tree/master/src/test)  
 
 # License  
-基于 Apache License 2.0 发布。有关详细信息，请参阅 [LICENSE](https://github.com/cyfonly/FLogger/blob/master/LICENCE)。
+基于 Apache License 2.0 发布。有关详细信息，请参阅 [LICENSE](https://github.com/cyfonly/FLogger/blob/master/LICENSE)。
