@@ -13,7 +13,7 @@ public class FloggerTest {
 		//指定日志级别和内容，文件名自动映射
 		logger.writeLog(Constant.INFO, "Here is your customized level message...");
 		//指定日志输出文件名、日志级别和内容
-//		logger.writeLog("error", Constant.ERROR, "Here is your customized log file and level message...");
+		logger.writeLog("error", Constant.ERROR, "Here is your customized log file and level message...");
 	}
 
 }
