@@ -1,4 +1,6 @@
 package com.cyfonly.flogger.constants;
+
+
 import java.util.HashMap;
 import java.util.Map;
 import com.cyfonly.flogger.utils.CommUtil;
@@ -24,6 +26,8 @@ public final class Constant {
 	
 	/**日志级别*/
 	public static String CFG_LOG_LEVEL = CommUtil.getConfigByString("LOG_LEVEL","0,1,2,3,4");
+	/**打印到信息台的日志级别*/
+	public static String PRINT_LOG_LEVEL= CommUtil.getConfigByString("PRINT_LOG_LEVEL","3,4");
 	
 	/**当前运行环境的字符集*/
 	public static String CFG_CHARSET_NAME = CommUtil.getConfigByString("CHARSET_NAME","UTF-8");
