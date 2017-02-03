@@ -105,7 +105,7 @@ public class FLogger {
 			logManager.addLog(logFileName, sb);
 			
 			//错误信息同时打印到控制台
-			if(Constant.ERROR == level || Constant.FATAL == level){
+			if(Constant.ERROR == level || Constant.FATAL == level||Constant.PRINT_LOG_LEVEL.contains(String.valueOf(level))){
 				try{
 					System.out.print(new String(sb.toString().getBytes(Constant.CFG_CHARSET_NAME),Constant.CFG_CHARSET_NAME));
 				}catch(Exception e){
