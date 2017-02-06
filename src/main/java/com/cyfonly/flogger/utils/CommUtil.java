@@ -22,7 +22,7 @@ public class CommUtil {
 	private static HashMap<String,Object[]> propsMap = new HashMap<String,Object[]>();
 	
 	/**
-	 * 从配置文件中取得字符串的值，若无则返回默认值
+	 * 从配置文件中取得 String 值，若无则返回默认值
 	 * @param keyName 属性名
 	 * @param defaultValue 默认值
 	 * @return 属性值
@@ -37,7 +37,27 @@ public class CommUtil {
 	}
 	
 	/**
-	 * 从配置文件中取得长整型的值，若无则返回默认值
+	 * 从配置文件中取得 int 值，若无（或解析异常）则返回默认值
+	 * @param keyName 属性名
+	 * @param defaultValue 默认值
+	 * @return 属性值
+	 */
+	public static int getConfigByInt(String keyName,int defaultValue){
+		String value = getConfig(keyName);
+		if(value != null && value.length() > 0){
+			try {
+				int parseValue = Integer.parseInt(value.trim());
+				return parseValue;
+			} catch (Exception e) {
+				return defaultValue;
+			}
+		}else{
+			return defaultValue;
+		}
+	}
+	
+	/**
+	 * 从配置文件中取得 long 值，若无（或解析异常）则返回默认值
 	 * @param keyName 属性名
 	 * @param defaultValue 默认值
 	 * @return 属性值
@@ -45,7 +65,27 @@ public class CommUtil {
 	public static long getConfigByLong(String keyName,long defaultValue) {
 		String value = getConfig(keyName);
 		if(value != null && value.length() > 0){
-			return Long.parseLong(value.trim());
+			try {
+				long parseValue = Long.parseLong(value.trim());
+				return parseValue;
+			} catch (Exception e) {
+				return defaultValue;
+			}
+		}else{
+			return defaultValue;
+		}
+	}
+	
+	/**
+	 * 从配置文件中取得 boolean 值，若无则返回默认值
+	 * @param keyName 属性名
+	 * @param defaultValue 默认值
+	 * @return 属性值
+	 */
+	public static boolean getConfigByBoolean(String keyName,boolean defaultValue){
+		String value = getConfig(keyName);
+		if(value != null && value.length() > 0){
+			return Boolean.parseBoolean(value.trim());
 		}else{
 			return defaultValue;
 		}

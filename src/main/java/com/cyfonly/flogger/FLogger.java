@@ -104,8 +104,8 @@ public class FLogger {
 			sb.append("\n");
 			logManager.addLog(logFileName, sb);
 			
-			//错误信息同时打印到控制台
-			if(Constant.ERROR == level || Constant.FATAL == level){
+			//错误信息强制打印到控制台；若 CONSOLE_PRINT 配置为 true，也将日志打印到控制台
+			if(Constant.ERROR == level || Constant.FATAL == level || Constant.CONSOLE_PRINT){
 				try{
 					System.out.print(new String(sb.toString().getBytes(Constant.CFG_CHARSET_NAME),Constant.CFG_CHARSET_NAME));
 				}catch(Exception e){

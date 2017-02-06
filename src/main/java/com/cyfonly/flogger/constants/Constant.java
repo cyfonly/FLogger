@@ -25,6 +25,9 @@ public final class Constant {
 	/**日志级别*/
 	public static String CFG_LOG_LEVEL = CommUtil.getConfigByString("LOG_LEVEL","0,1,2,3,4");
 	
+	/**是否输出到控制台*/
+	public static boolean CONSOLE_PRINT = CommUtil.getConfigByBoolean("CONSOLE_PRINT",Boolean.FALSE);
+	
 	/**当前运行环境的字符集*/
 	public static String CFG_CHARSET_NAME = CommUtil.getConfigByString("CHARSET_NAME","UTF-8");
 	
