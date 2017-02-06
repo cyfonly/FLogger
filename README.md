@@ -19,7 +19,7 @@
 <dependency>
     <groupId>com.github.cyfonly</groupId>
     <artifactId>flogger</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```  
 #### 2. flogger.properties  
@@ -72,6 +72,8 @@ CHARSET_NAME = UTF-8
 ########## 日志信息配置 ##########
 # 日志级别   0:调试信息  1:普通信息   2:警告信息  3:错误信息  4:严重错误信息 
 LOG_LEVEL = 0,1,2,3,4
+# 是否输出到控制台(默认为false)
+CONSOLE_PRINT = false
 # 日志文件存放路径
 LOG_PATH =./log
 # 日志写入文件的间隔时间(默认为1000毫秒)
