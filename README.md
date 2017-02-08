@@ -87,7 +87,7 @@ SINGLE_LOG_CACHE_SIZE = 10240
 # Throughput  
 FLogger平均吞吐量如下所示  
 ![throughput](https://github.com/cyfonly/FLogger/blob/master/img/throughput.png "throughput")  
-测试代码see [https://github.com/cyfonly/FLogger/tree/master/src/test/FloggerThroughputTest.java](https://github.com/cyfonly/FLogger/tree/master/src/test/FloggerThroughputTest.java)  
+测试代码see [https://github.com/cyfonly/FLogger/blob/master/src/test/java/com/yun/flogger/test/FloggerThroughputTest.java](https://github.com/cyfonly/FLogger/blob/master/src/test/java/com/yun/flogger/test/FloggerThroughputTest.java)  
 
 # Demo
 see [https://github.com/cyfonly/FLogger/tree/master/src/test](https://github.com/cyfonly/FLogger/tree/master/src/test)  
