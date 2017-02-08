@@ -1,4 +1,4 @@
-![design](https://github.com/cyfonly/FLogger/blob/master/FLogger.png "FLooger")  
+![design](https://github.com/cyfonly/FLogger/blob/master/img/FLogger.png "FLooger")  
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/cyfonly/FLogger/blob/master/LICENSE)  [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://search.maven.org/#search%7Cga%7C1%7Ccyfonly)  
 基于双缓冲队列、多刷盘机制的超轻量级 java 日志  
 
@@ -83,6 +83,11 @@ SINGLE_LOG_FILE_SIZE = 10485760
 # 单个日志文件缓存的大小(默认为10KB)
 SINGLE_LOG_CACHE_SIZE = 10240
 ```  
+  
+# Throughput  
+FLogger平均吞吐量如下所示  
+![throughput](https://github.com/cyfonly/FLogger/blob/master/img/throughput.png "throughput")  
+测试代码see [https://github.com/cyfonly/FLogger/tree/master/src/test/FloggerThroughputTest.java](https://github.com/cyfonly/FLogger/tree/master/src/test/FloggerThroughputTest.java)  
 
 # Demo
 see [https://github.com/cyfonly/FLogger/tree/master/src/test](https://github.com/cyfonly/FLogger/tree/master/src/test)  
