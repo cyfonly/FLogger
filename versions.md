@@ -4,7 +4,7 @@
 #### 改进：  
 * 无  
 
-#### bug修复  
+#### bug修复：  
 * 修复不能自动创建多级目录的bug  
 
 可下载文件已经发布到 [Maven Central Repository](http://repo1.maven.org/maven2/com/github/cyfonly/flogger/1.0.2/)。
