@@ -19,7 +19,7 @@
 <dependency>
     <groupId>com.github.cyfonly</groupId>
     <artifactId>flogger</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```  
 #### 2. flogger.properties  
