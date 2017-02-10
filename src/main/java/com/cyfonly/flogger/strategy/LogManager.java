@@ -155,7 +155,7 @@ public class LogManager extends Thread {
     	//判断日志root路径是否存在，不存在则先创建
     	File rootDir = new File(Constant.CFG_LOG_PATH);
     	if(!rootDir.exists() || !rootDir.isDirectory()){
-    		rootDir.mkdir();
+    		rootDir.mkdirs();
     	}
     	
     	//如果超过单个文件大小，则拆分文件
