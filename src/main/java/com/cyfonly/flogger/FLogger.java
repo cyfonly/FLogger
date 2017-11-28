@@ -1,6 +1,7 @@
 package com.cyfonly.flogger;
 
 import com.cyfonly.flogger.constants.Constant;
+import com.cyfonly.flogger.constants.Constant.LogLevel;
 import com.cyfonly.flogger.strategy.LogManager;
 import com.cyfonly.flogger.utils.CommUtil;
 import com.cyfonly.flogger.utils.TimeUtil;
@@ -21,7 +22,7 @@ public class FLogger {
 	
 	public FLogger(){
 		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
-			@Override
+//			@Override
 			public void run() {
 				close();
 			}
@@ -40,7 +41,7 @@ public class FLogger {
 	 * @param logMsg 日志内容
 	 */
 	public void debug(String logMsg){
-		writeLog("debug",Constant.DEBUG,logMsg);
+		writeLog("debug",LogLevel.DEBUG,logMsg);
 	}
 	
 	/**
@@ -48,7 +49,7 @@ public class FLogger {
 	 * @param logMsg 日志内容
 	 */
 	public void info(String logMsg){
-		writeLog("info",Constant.INFO,logMsg);
+		writeLog("info",LogLevel.INFO,logMsg);
 	}
 	
 	/**
@@ -56,7 +57,7 @@ public class FLogger {
 	 * @param logMsg 日志内容
 	 */
 	public void warn(String logMsg){
-		writeLog("warn",Constant.WARN,logMsg);
+		writeLog("warn",LogLevel.WARN,logMsg);
 	}
 	
 	/**
@@ -64,7 +65,7 @@ public class FLogger {
 	 * @param logMsg 日志内容
 	 */
 	public void error(String logMsg){
-		writeLog("error",Constant.ERROR,logMsg);
+		writeLog("error",LogLevel.ERROR,logMsg);
 	}
 	
 	/**
@@ -72,7 +73,7 @@ public class FLogger {
 	 * @param logMsg 日志内容
 	 */
 	public void fatal(String logMsg){
-		writeLog("fatal",Constant.FATAL,logMsg);
+		writeLog("fatal",LogLevel.FATAL,logMsg);
 	}
 	
 	/**
@@ -80,8 +81,8 @@ public class FLogger {
 	 * @param level 日志级别
 	 * @param logMsg 日志内容
 	 */
-	public void writeLog(int level,String logMsg){
-		writeLog(Constant.LOG_DESC_MAP.get(String.valueOf(level)).toLowerCase(),level,logMsg);
+	public void writeLog(LogLevel level,String logMsg){
+		writeLog(level.name(),level,logMsg);
 	}
 	
 	/**
@@ -90,11 +91,11 @@ public class FLogger {
 	 * @param level 日志级别
 	 * @param logMsg 日志内容
 	 */
-	public void writeLog(String logFileName, int level, String logMsg){
-		if(logMsg != null && Constant.CFG_LOG_LEVEL.indexOf(""+level) >= 0){
+	public void writeLog(String logFileName, LogLevel level, String logMsg){
+		if(logMsg != null && CommUtil.contains(level)){
 			StringBuffer sb = new StringBuffer(logMsg.length() + 100);
 			sb.append("[");
-			sb.append(Constant.LOG_DESC_MAP.get(String.valueOf(level)));
+			sb.append(level.name());
 			sb.append("] ");
 			sb.append(TimeUtil.getFullDateTime());
 			sb.append(" [");
@@ -105,7 +106,7 @@ public class FLogger {
 			logManager.addLog(logFileName, sb);
 			
 			//错误信息强制打印到控制台；若 CONSOLE_PRINT 配置为 true，也将日志打印到控制台
-			if(Constant.ERROR == level || Constant.FATAL == level || Constant.CONSOLE_PRINT){
+			if(LogLevel.ERROR == level || LogLevel.FATAL == level || Constant.CONSOLE_PRINT){
 				try{
 					System.out.print(new String(sb.toString().getBytes(Constant.CFG_CHARSET_NAME),Constant.CFG_CHARSET_NAME));
 				}catch(Exception e){
