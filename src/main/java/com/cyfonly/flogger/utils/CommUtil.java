@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Properties;
 import com.cyfonly.flogger.constants.Constant;
+import com.cyfonly.flogger.constants.Constant.LogLevel;
 
 /**
  * 公用工具类
@@ -181,4 +182,23 @@ public class CommUtil {
 		return bo.toString();
 	}
 	
+	/** 
+	 * @Description: 验证是否是声明的几种日志级别 
+	 * @date 2017年11月28日 下午5:05:40 
+	 * @param @param level
+	 * @param @return
+	 * @return boolean
+	 * @throws 
+	*/  
+	public static boolean contains(LogLevel level){
+		if(level==null){
+			return false;
+		}
+		for (LogLevel value : LogLevel.values()) {
+			if(value==level){//有匹配，返回true
+				return true;
+			}
+		}
+		return false;
+	}
 }
