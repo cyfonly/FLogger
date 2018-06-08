@@ -14,7 +14,11 @@ import com.cyfonly.flogger.constants.Constant;
  * @version 2015/10/31
  */
 public class CommUtil {
-	
+
+
+
+
+
 	/** 配置文件名 */
 	private static final String CONFIG_FILE_NAME = "flogger.properties";
 	
